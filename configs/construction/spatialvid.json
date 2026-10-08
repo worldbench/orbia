@@ -1,0 +1,102 @@
+{
+  "work_dir": "/local/orbia/construction/spatialvid",
+  "output_dir": "/local/orbia/dataset",
+  "source": {
+    "kind": "spatialvid",
+    "name": "SpatialVID",
+    "root": "/local/orbia/sources/spatialvid",
+    "video_id": "replace_with_video_id",
+    "group_id": "group_0001",
+    "depth_unit": "source_pose_unit",
+    "frame_ids": [
+      "pose_00000",
+      "pose_00010",
+      "pose_00020",
+      "pose_00030",
+      "pose_00040",
+      "pose_00050",
+      "pose_00060",
+      "pose_00070",
+      "pose_00080",
+      "pose_00090",
+      "pose_00100",
+      "pose_00110",
+      "pose_00120",
+      "pose_00130",
+      "pose_00140",
+      "pose_00150",
+      "pose_00160",
+      "pose_00170",
+      "pose_00180",
+      "pose_00190",
+      "pose_00200",
+      "pose_00210",
+      "pose_00220",
+      "pose_00230",
+      "pose_00240",
+      "pose_00250",
+      "pose_00260",
+      "pose_00270",
+      "pose_00280",
+      "pose_00290",
+      "pose_00300"
+    ]
+  },
+  "geometry": {
+    "mode": "provided"
+  },
+  "selection": {
+    "template": "lateral_out_and_back",
+    "pose_gates": "pose_gates.json",
+    "minimum_support": 0.05,
+    "maximum_candidates": 20,
+    "include_long": true
+  },
+  "annotation": {
+    "tracking": true,
+    "tracking_shortlist": 5,
+    "maximum_anchors": 3,
+    "deduplicate_iou": 0.9,
+    "thresholds": {
+      "minimum_tracking_iou": 0.8,
+      "minimum_endpoint_area_percent": 0.3,
+      "maximum_endpoint_area_percent": 50,
+      "minimum_largest_component_ratio": 0.85,
+      "maximum_internal_gap_ratio": 0.2
+    },
+    "scene_review": true
+  },
+  "visibility": {
+    "relative_tolerance": 0.1,
+    "absolute_tolerance": 0.02,
+    "minimum_coverage": 0.1,
+    "maximum_depth_absrel": 0.1,
+    "maximum_rgb_mae": 0.2
+  },
+  "trajectory_qa": {
+    "enabled": true,
+    "clearance": true,
+    "minimum_clearance": 0.01,
+    "voxel_size": 0.05,
+    "uniform_sample_count": 32,
+    "maximum_fusion_frames": 16,
+    "maximum_attempts": 3
+  },
+  "long": {
+    "minimum_revisit_gap_s": 5
+  },
+  "models": {
+    "vlm": {
+      "model": "/local/weights/Qwen3.5-9B",
+      "max_tokens": 4096
+    },
+    "sam3": {
+      "repository": "/local/source/sam3",
+      "checkpoint": "/local/weights/sam3.1_multiplex.pt",
+      "threshold": 0.35
+    }
+  },
+  "revisits": {
+    "enabled": true
+  }
+}

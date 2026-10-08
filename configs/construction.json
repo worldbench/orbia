@@ -1,0 +1,74 @@
+{
+  "work_dir": "/local/orbia/construction",
+  "output_dir": "/local/orbia/dataset",
+  "source": {
+    "kind": "registered",
+    "name": "Self-captured",
+    "depth_unit": "metre",
+    "frames": [
+      {
+        "id": "q0",
+        "rgb": "/local/orbia/source/q0.png",
+        "depth": "/local/orbia/source/q0_depth.npy",
+        "intrinsics": "/local/orbia/source/q0_K.npy",
+        "pose_c2w": "/local/orbia/source/q0_pose.npy"
+      },
+      {
+        "id": "qe",
+        "rgb": "/local/orbia/source/qe.png",
+        "depth": "/local/orbia/source/qe_depth.npy",
+        "intrinsics": "/local/orbia/source/qe_K.npy",
+        "pose_c2w": "/local/orbia/source/qe_pose.npy"
+      }
+    ]
+  },
+  "geometry": {
+    "mode": "provided"
+  },
+  "cases": [
+    {
+      "case_id": "case_0001",
+      "long_case_id": "case_0002",
+      "q0": "q0",
+      "qe": "qe",
+      "template": "forward_backward",
+      "parameters": {},
+      "anchors": [
+        {
+          "anchor_id": "A1",
+          "label": "selected static landmark",
+          "q0_mask": "/local/orbia/source/q0_anchor.png",
+          "qe_mask": "/local/orbia/source/qe_anchor.png"
+        }
+      ],
+      "caption": "Replace this caption with the factual scene description from the registered source observations.",
+      "accepted": false
+    }
+  ],
+  "visibility": {
+    "relative_tolerance": 0.1,
+    "absolute_tolerance": 0.02,
+    "minimum_coverage": 0.1,
+    "maximum_depth_absrel": 0.1,
+    "maximum_rgb_mae": 0.2
+  },
+  "long": {
+    "minimum_revisit_gap_s": 5
+  },
+  "models": {
+    "vlm": {
+      "model": "/local/weights/Qwen3.5-9B",
+      "max_tokens": 4096
+    },
+    "sam3": {
+      "repository": "/local/source/sam3",
+      "checkpoint": "/local/weights/sam3.1_multiplex.pt",
+      "threshold": 0.35
+    }
+  },
+  "annotation": {
+    "tracking": false,
+    "minimum_endpoint_identity_support": 0.1,
+    "maximum_anchors": 3
+  }
+}

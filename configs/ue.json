@@ -1,0 +1,83 @@
+{
+  "work_dir": "/local/orbia/ue_capture",
+  "map": "/Game/Scenes/YourMap",
+  "origin_ue": {
+    "location_cm": [
+      0,
+      0,
+      170
+    ],
+    "quaternion_xyzw": [
+      0,
+      0,
+      0,
+      1
+    ]
+  },
+  "camera": {
+    "resolution_px": [
+      1280,
+      720
+    ],
+    "focal_length_mm": 24,
+    "sensor_width_mm": 36,
+    "sensor_height_mm": 20.25
+  },
+  "cases": [
+    {
+      "case_id": "ue_forward",
+      "long_case_id": "ue_forward_long",
+      "template": "forward_backward",
+      "qe_c2w": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "parameters": {
+        "distance_m": 3
+      },
+      "caption": "A description of the static scene visible from the initial camera.",
+      "anchors": [
+        {
+          "anchor_id": "A1",
+          "label": "building entrance",
+          "actor_label": "Entrance"
+        }
+      ]
+    }
+  ],
+  "output_dir": "/local/orbia/dataset",
+  "extraction": {
+    "world_depth_definition": "camera_axis_z",
+    "world_unit_to_m": 0.01,
+    "max_depth_m": 650,
+    "rgb_transfer": "linear_to_srgb"
+  },
+  "curation": {
+    "query": "search",
+    "revisit": "search",
+    "query_search_end": 170,
+    "voxel_size": 0.1
+  }
+}

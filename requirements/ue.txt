@@ -1,0 +1,7 @@
+numpy>=1.26,<2
+Pillow>=10
+scipy>=1.10
+opencv-python-headless>=4.8,<4.12
+PyYAML>=6
+OpenImageIO==3.0.17.0
+

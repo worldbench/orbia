@@ -1,0 +1,103 @@
+{
+  "work_dir": "/local/orbia/construction/mira",
+  "output_dir": "/local/orbia/dataset",
+  "source": {
+    "kind": "mira",
+    "name": "MiraData",
+    "video": "/local/orbia/sources/mira/clip.mp4",
+    "frame_indices": [
+      0,
+      10,
+      20,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      120,
+      130,
+      140,
+      150,
+      160,
+      170,
+      180,
+      190,
+      200,
+      210,
+      220,
+      230,
+      240,
+      250,
+      260,
+      270,
+      280,
+      290,
+      300
+    ],
+    "fps": 30,
+    "depth_unit": "DA3_estimated_unit"
+  },
+  "geometry": {
+    "mode": "da3",
+    "checkpoint": "/local/weights/DA3",
+    "device": "cuda"
+  },
+  "selection": {
+    "template": "lateral_out_and_back",
+    "pose_gates": "pose_gates.json",
+    "minimum_support": 0.05,
+    "maximum_candidates": 20,
+    "include_long": true
+  },
+  "annotation": {
+    "tracking": true,
+    "tracking_shortlist": 5,
+    "maximum_anchors": 3,
+    "deduplicate_iou": 0.9,
+    "thresholds": {
+      "minimum_tracking_iou": 0.8,
+      "minimum_endpoint_area_percent": 0.3,
+      "maximum_endpoint_area_percent": 50,
+      "minimum_largest_component_ratio": 0.85,
+      "maximum_internal_gap_ratio": 0.2
+    },
+    "scene_review": true
+  },
+  "visibility": {
+    "relative_tolerance": 0.1,
+    "absolute_tolerance": 0.02,
+    "minimum_coverage": 0.1,
+    "maximum_depth_absrel": 0.1,
+    "maximum_rgb_mae": 0.2
+  },
+  "trajectory_qa": {
+    "enabled": true,
+    "clearance": true,
+    "minimum_clearance": 0.01,
+    "voxel_size": 0.05,
+    "uniform_sample_count": 32,
+    "maximum_fusion_frames": 16,
+    "maximum_attempts": 3
+  },
+  "long": {
+    "minimum_revisit_gap_s": 5
+  },
+  "models": {
+    "vlm": {
+      "model": "/local/weights/Qwen3.5-9B",
+      "max_tokens": 4096
+    },
+    "sam3": {
+      "repository": "/local/source/sam3",
+      "checkpoint": "/local/weights/sam3.1_multiplex.pt",
+      "threshold": 0.35
+    }
+  },
+  "revisits": {
+    "enabled": true
+  }
+}

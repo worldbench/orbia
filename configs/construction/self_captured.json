@@ -1,0 +1,104 @@
+{
+  "work_dir": "/local/orbia/construction/self_captured",
+  "output_dir": "/local/orbia/dataset",
+  "source": {
+    "kind": "self_captured",
+    "name": "Self-recorded",
+    "video": "/local/orbia/sources/self_captured/clip.mp4",
+    "frame_indices": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48,
+      52,
+      56,
+      60,
+      64,
+      68,
+      72,
+      76,
+      80,
+      84,
+      88,
+      92,
+      96,
+      100,
+      104,
+      108,
+      112,
+      116,
+      120
+    ],
+    "fps": 30,
+    "depth_unit": "DA3_estimated_unit"
+  },
+  "geometry": {
+    "mode": "da3",
+    "checkpoint": "/local/weights/DA3",
+    "device": "cuda"
+  },
+  "selection": {
+    "template": "lateral_out_and_back",
+    "pose_gates": "pose_gates.json",
+    "minimum_support": 0.05,
+    "maximum_candidates": 20,
+    "maximum_q0_index": 0,
+    "include_long": true
+  },
+  "annotation": {
+    "tracking": false,
+    "tracking_shortlist": 5,
+    "maximum_anchors": 3,
+    "deduplicate_iou": 0.9,
+    "thresholds": {
+      "minimum_tracking_iou": 0.8,
+      "minimum_endpoint_area_percent": 0.3,
+      "maximum_endpoint_area_percent": 50,
+      "minimum_largest_component_ratio": 0.85,
+      "maximum_internal_gap_ratio": 0.2
+    },
+    "minimum_endpoint_identity_support": 0.1
+  },
+  "visibility": {
+    "relative_tolerance": 0.1,
+    "absolute_tolerance": 0.02,
+    "minimum_coverage": 0.1,
+    "maximum_depth_absrel": 0.1,
+    "maximum_rgb_mae": 0.2
+  },
+  "trajectory_qa": {
+    "enabled": true,
+    "clearance": true,
+    "minimum_clearance": 0.01,
+    "voxel_size": 0.05,
+    "uniform_sample_count": 32,
+    "maximum_fusion_frames": 16,
+    "maximum_attempts": 3
+  },
+  "long": {
+    "minimum_revisit_gap_s": 5
+  },
+  "models": {
+    "vlm": {
+      "model": "/local/weights/Qwen3.5-9B",
+      "max_tokens": 4096
+    },
+    "sam3": {
+      "repository": "/local/source/sam3",
+      "checkpoint": "/local/weights/sam3.1_multiplex.pt",
+      "threshold": 0.35
+    }
+  },
+  "revisits": {
+    "enabled": true
+  }
+}

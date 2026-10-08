@@ -1,0 +1,17 @@
+numpy>=1.26,<2
+setuptools<81
+Pillow>=10
+scipy>=1.10
+opencv-python-headless>=4.8,<4.12
+PyYAML>=6
+torch==2.10.0
+torchvision==0.25.0
+einops
+omegaconf
+huggingface-hub>=0.26
+numba
+decord
+pycocotools
+scikit-image
+scikit-learn
+psutil

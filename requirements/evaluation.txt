@@ -1,0 +1,26 @@
+-r sam.txt
+opencv-python>=4.8,<4.12
+xformers==0.0.34
+transformers==4.45.2
+pyiqa==0.1.15
+lpips
+safetensors
+timm
+peft==0.10.0
+trl==0.8.6
+accelerate==1.8.0
+datasets==3.6.0
+diffusers==0.33.1
+deepspeed==0.15.4
+qwen-vl-utils==0.0.11
+huggingface-hub>=0.26,<1
+faiss-cpu
+pandas
+prettytable
+pypose
+imageio
+tqdm
+matplotlib
+tensorboard
+ninja
+wheel

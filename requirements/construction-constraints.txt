@@ -1,0 +1,9 @@
+numpy>=1.26,<2
+open3d==0.19.0
+decord==0.6.0
+opencv-python-headless>=4.8,<4.12
+opencv-python>=4.8,<4.12
+torch==2.10.0
+torchvision==0.25.0
+xformers==0.0.34
+OpenImageIO==3.0.17.0

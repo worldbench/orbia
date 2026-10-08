@@ -1,0 +1,66 @@
+{
+  "work_dir": "/local/orbia/construction/scannetpp",
+  "output_dir": "/local/orbia/dataset",
+  "source": {
+    "kind": "scannetpp",
+    "name": "ScanNet++",
+    "scene_root": "/local/orbia/sources/scannetpp/data/replace_with_scene_id",
+    "stride": 10,
+    "depth_scale": 0.001
+  },
+  "geometry": {
+    "mode": "provided"
+  },
+  "selection": {
+    "template": "lateral_out_and_back",
+    "pose_gates": "pose_gates.json",
+    "minimum_support": 0.05,
+    "maximum_candidates": 20,
+    "include_long": true
+  },
+  "annotation": {
+    "tracking": false,
+    "mesh_anchors": true,
+    "mesh": {
+      "minimum_area_percent": 0.3,
+      "maximum_area_percent": 50,
+      "minimum_shared_surface": 0.3,
+      "maximum_anchors": 3
+    }
+  },
+  "visibility": {
+    "relative_tolerance": 0.1,
+    "absolute_tolerance": 0.02,
+    "minimum_coverage": 0.1,
+    "maximum_depth_absrel": 0.1,
+    "maximum_rgb_mae": 0.2
+  },
+  "trajectory_qa": {
+    "enabled": true,
+    "clearance": true,
+    "minimum_clearance": 0.01,
+    "voxel_size": 0.05,
+    "uniform_sample_count": 32,
+    "maximum_fusion_frames": 16,
+    "maximum_attempts": 3,
+    "mesh_clearance": true
+  },
+  "long": {
+    "minimum_revisit_gap_s": 5
+  },
+  "models": {
+    "vlm": {
+      "model": "/local/weights/Qwen3.5-9B",
+      "max_tokens": 4096
+    },
+    "sam3": {
+      "repository": "/local/source/sam3",
+      "checkpoint": "/local/weights/sam3.1_multiplex.pt",
+      "threshold": 0.35
+    }
+  },
+  "revisits": {
+    "enabled": true,
+    "voxel_size": 0.05
+  }
+}

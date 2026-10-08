@@ -1,0 +1,68 @@
+{
+  "forward_backward": {
+    "minimum_translation_m": 0.75,
+    "maximum_translation_m": 3.0,
+    "minimum_rotation_deg": 0.0,
+    "maximum_rotation_deg": 12.0,
+    "minimum_forward_component_m": 0.5,
+    "minimum_forward_ratio": 0.85,
+    "maximum_absolute_right_ratio": 0.35,
+    "maximum_absolute_vertical_ratio": 0.05,
+    "minimum_direction_angle_deg": 0.0,
+    "maximum_direction_angle_deg": 25.0
+  },
+  "lateral_out_and_back": {
+    "minimum_translation_m": 0.75,
+    "maximum_translation_m": 3.0,
+    "minimum_rotation_deg": 0.0,
+    "maximum_rotation_deg": 15.0,
+    "minimum_lateral_component_m": 0.5,
+    "minimum_absolute_right_ratio": 0.8,
+    "maximum_absolute_forward_ratio": 0.42,
+    "maximum_absolute_vertical_ratio": 0.2,
+    "minimum_direction_angle_deg": 65.0,
+    "maximum_direction_angle_deg": 115.0
+  },
+  "yaw_return": {
+    "minimum_translation_m": 0.01,
+    "maximum_translation_m": 0.08,
+    "minimum_rotation_deg": 30.0,
+    "maximum_rotation_deg": 60.0,
+    "maximum_absolute_forward_component_m": 0.08,
+    "maximum_absolute_right_component_m": 0.08,
+    "maximum_absolute_vertical_component_m": 0.05
+  },
+  "arc_return": {
+    "minimum_translation_m": 0.75,
+    "maximum_translation_m": 3.0,
+    "minimum_rotation_deg": 10.0,
+    "maximum_rotation_deg": 75.0,
+    "minimum_forward_ratio": 0.3,
+    "minimum_absolute_right_ratio": 0.25,
+    "maximum_absolute_vertical_ratio": 0.2,
+    "minimum_direction_angle_deg": 20.0,
+    "maximum_direction_angle_deg": 70.0
+  },
+  "orbit_around_anchor": {
+    "minimum_translation_m": 0.75,
+    "maximum_translation_m": 3.0,
+    "minimum_rotation_deg": 20.0,
+    "maximum_rotation_deg": 75.0,
+    "minimum_absolute_right_ratio": 0.55,
+    "maximum_absolute_vertical_ratio": 0.2,
+    "minimum_direction_angle_deg": 55.0,
+    "maximum_direction_angle_deg": 125.0
+  },
+  "peek_occlude_retract": {
+    "minimum_translation_m": 0.75,
+    "maximum_translation_m": 3.0,
+    "minimum_rotation_deg": 10.0,
+    "maximum_rotation_deg": 75.0,
+    "minimum_forward_component_m": 0.25,
+    "minimum_forward_ratio": 0.45,
+    "minimum_absolute_right_ratio": 0.2,
+    "maximum_absolute_vertical_ratio": 0.25,
+    "minimum_direction_angle_deg": 15.0,
+    "maximum_direction_angle_deg": 75.0
+  }
+}

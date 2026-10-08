@@ -1,0 +1,488 @@
+{
+  "version": "orbia-1.0",
+  "maps": {
+    "depth_medium": {
+      "mode": "linear",
+      "lo": 0.0,
+      "hi": 0.14176436788561275,
+      "direction": -1,
+      "source": "model-balanced quantiles; 0/P95 for errors, P5/P95 for PSNR"
+    },
+    "depth_short": {
+      "mode": "linear",
+      "lo": 0.0,
+      "hi": 0.09525020744355248,
+      "direction": -1,
+      "source": "model-balanced quantiles; 0/P95 for errors, P5/P95 for PSNR"
+    },
+    "gs_lpips": {
+      "mode": "linear",
+      "lo": 0.0,
+      "hi": 0.7396781370043755,
+      "direction": -1,
+      "source": "model-balanced quantiles; 0/P95 for errors, P5/P95 for PSNR"
+    },
+    "gs_psnr": {
+      "mode": "linear",
+      "lo": 10.539809218922558,
+      "hi": 16.268401595223732,
+      "direction": 1,
+      "source": "model-balanced quantiles; 0/P95 for errors, P5/P95 for PSNR"
+    },
+    "gs_ssim": {
+      "mode": "unit",
+      "interpretation": "100*clip(raw,0,1); negative similarity maps to zero"
+    },
+    "identity_mean": {
+      "mode": "unit",
+      "interpretation": "100*clip(raw,0,1); negative similarity maps to zero"
+    },
+    "qe_anchor_depth": {
+      "mode": "linear",
+      "lo": 0.0,
+      "hi": 2.437855698099644,
+      "direction": -1,
+      "source": "model-balanced quantiles; 0/P95 for errors, P5/P95 for PSNR"
+    },
+    "qe_anchor_dino": {
+      "mode": "unit",
+      "interpretation": "100*clip(raw,0,1); negative similarity maps to zero"
+    },
+    "qe_anchor_lpips": {
+      "mode": "linear",
+      "lo": 0.0,
+      "hi": 0.8064011335372925,
+      "direction": -1,
+      "source": "model-balanced quantiles; 0/P95 for errors, P5/P95 for PSNR"
+    },
+    "qe_anchor_psnr": {
+      "mode": "linear",
+      "lo": 6.516648524540612,
+      "hi": 20.357512070936565,
+      "direction": 1,
+      "source": "model-balanced quantiles; 0/P95 for errors, P5/P95 for PSNR"
+    },
+    "qe_anchor_ssim": {
+      "mode": "unit",
+      "interpretation": "100*clip(raw,0,1); negative similarity maps to zero"
+    },
+    "qe_depth": {
+      "mode": "linear",
+      "lo": 0.0,
+      "hi": 0.9412913785181602,
+      "direction": -1,
+      "source": "model-balanced quantiles; 0/P95 for errors, P5/P95 for PSNR"
+    },
+    "qe_dino": {
+      "mode": "unit",
+      "interpretation": "100*clip(raw,0,1); negative similarity maps to zero"
+    },
+    "qe_lpips": {
+      "mode": "linear",
+      "lo": 0.0,
+      "hi": 0.7165747284889221,
+      "direction": -1,
+      "source": "model-balanced quantiles; 0/P95 for errors, P5/P95 for PSNR"
+    },
+    "qe_psnr": {
+      "mode": "linear",
+      "lo": 7.857921244216762,
+      "hi": 18.650929576599054,
+      "direction": 1,
+      "source": "model-balanced quantiles; 0/P95 for errors, P5/P95 for PSNR"
+    },
+    "qe_ssim": {
+      "mode": "unit",
+      "interpretation": "100*clip(raw,0,1); negative similarity maps to zero"
+    },
+    "reproj_medium": {
+      "mode": "unit",
+      "interpretation": "100*clip(raw,0,1); negative similarity maps to zero"
+    },
+    "reproj_short": {
+      "mode": "unit",
+      "interpretation": "100*clip(raw,0,1); negative similarity maps to zero"
+    },
+    "return_anchor_depth": {
+      "mode": "linear",
+      "lo": 0.0,
+      "hi": 2.67922551011131,
+      "direction": -1,
+      "source": "model-balanced quantiles; 0/P95 for errors, P5/P95 for PSNR"
+    },
+    "return_anchor_dino": {
+      "mode": "unit",
+      "interpretation": "100*clip(raw,0,1); negative similarity maps to zero"
+    },
+    "return_anchor_lpips": {
+      "mode": "linear",
+      "lo": 0.0,
+      "hi": 0.8377343416213989,
+      "direction": -1,
+      "source": "model-balanced quantiles; 0/P95 for errors, P5/P95 for PSNR"
+    },
+    "return_anchor_psnr": {
+      "mode": "linear",
+      "lo": 6.563484363389333,
+      "hi": 22.54424610613289,
+      "direction": 1,
+      "source": "model-balanced quantiles; 0/P95 for errors, P5/P95 for PSNR"
+    },
+    "return_anchor_ssim": {
+      "mode": "unit",
+      "interpretation": "100*clip(raw,0,1); negative similarity maps to zero"
+    },
+    "return_depth": {
+      "mode": "linear",
+      "lo": 0.0,
+      "hi": 1.2495174358422247,
+      "direction": -1,
+      "source": "model-balanced quantiles; 0/P95 for errors, P5/P95 for PSNR"
+    },
+    "return_dino": {
+      "mode": "unit",
+      "interpretation": "100*clip(raw,0,1); negative similarity maps to zero"
+    },
+    "return_lpips": {
+      "mode": "linear",
+      "lo": 0.0,
+      "hi": 0.7513390779495239,
+      "direction": -1,
+      "source": "model-balanced quantiles; 0/P95 for errors, P5/P95 for PSNR"
+    },
+    "return_psnr": {
+      "mode": "linear",
+      "lo": 7.840857641709704,
+      "hi": 21.064701258387007,
+      "direction": 1,
+      "source": "model-balanced quantiles; 0/P95 for errors, P5/P95 for PSNR"
+    },
+    "return_ssim": {
+      "mode": "unit",
+      "interpretation": "100*clip(raw,0,1); negative similarity maps to zero"
+    },
+    "revisit_different_dino": {
+      "mode": "unit",
+      "interpretation": "100*clip(raw,0,1); negative similarity maps to zero"
+    },
+    "revisit_geom_depth_abs_rel": {
+      "mode": "linear",
+      "lo": 0.0,
+      "hi": 0.3347997114247419,
+      "direction": -1,
+      "source": "model-balanced quantiles; 0/P95 for errors, P5/P95 for PSNR"
+    },
+    "revisit_geom_dino_similarity": {
+      "mode": "unit",
+      "interpretation": "100*clip(raw,0,1); negative similarity maps to zero"
+    },
+    "revisit_geom_local_pointcloud_fscore": {
+      "mode": "unit",
+      "interpretation": "100*clip(raw,0,1); negative similarity maps to zero"
+    },
+    "revisit_same_depth_abs_rel": {
+      "mode": "linear",
+      "lo": 0.0,
+      "hi": 2.059636474372718,
+      "direction": -1,
+      "source": "model-balanced quantiles; 0/P95 for errors, P5/P95 for PSNR"
+    },
+    "revisit_same_dino_patch_similarity": {
+      "mode": "unit",
+      "interpretation": "100*clip(raw,0,1); negative similarity maps to zero"
+    },
+    "revisit_same_lpips": {
+      "mode": "linear",
+      "lo": 0.0,
+      "hi": 0.6862051089604696,
+      "direction": -1,
+      "source": "model-balanced quantiles; 0/P95 for errors, P5/P95 for PSNR"
+    },
+    "revisit_same_psnr": {
+      "mode": "linear",
+      "lo": 8.392342638818656,
+      "hi": 20.910536107951618,
+      "direction": 1,
+      "source": "model-balanced quantiles; 0/P95 for errors, P5/P95 for PSNR"
+    },
+    "scale": {
+      "mode": "linear",
+      "lo": 0.0,
+      "hi": 0.04653122656560562,
+      "direction": -1,
+      "source": "model-balanced quantiles; 0/P95 for errors, P5/P95 for PSNR"
+    }
+  },
+  "fields": {
+    "depth_medium": {
+      "metric": "depth_temporal_consistency",
+      "path": "raw.medium.abs_rel.mean",
+      "direction": -1
+    },
+    "depth_short": {
+      "metric": "depth_temporal_consistency",
+      "path": "raw.short.abs_rel.mean",
+      "direction": -1
+    },
+    "gs_lpips": {
+      "metric": "da3_reconstruction",
+      "path": "raw.lpips.mean",
+      "direction": -1
+    },
+    "gs_psnr": {
+      "metric": "da3_reconstruction",
+      "path": "raw.psnr.mean",
+      "direction": 1
+    },
+    "gs_ssim": {
+      "metric": "da3_reconstruction",
+      "path": "raw.ssim.mean",
+      "direction": 1
+    },
+    "identity_mean": {
+      "metric": "anchor_identity",
+      "path": "raw.macro_mean_similarity",
+      "direction": 1
+    },
+    "qe_anchor_depth": {
+      "metric": "evidence_query",
+      "path": "raw.canonical.anchor_depth.macro_abs_rel",
+      "direction": -1
+    },
+    "qe_anchor_dino": {
+      "metric": "evidence_query",
+      "path": "raw.canonical.anchor_macro.local_dino_similarity",
+      "direction": 1
+    },
+    "qe_anchor_lpips": {
+      "metric": "evidence_query",
+      "path": "raw.canonical.anchor_macro.lpips",
+      "direction": -1
+    },
+    "qe_anchor_psnr": {
+      "metric": "evidence_query",
+      "path": "raw.canonical.anchor_macro.psnr",
+      "direction": 1
+    },
+    "qe_anchor_ssim": {
+      "metric": "evidence_query",
+      "path": "raw.canonical.anchor_macro.ssim",
+      "direction": 1
+    },
+    "qe_depth": {
+      "metric": "evidence_query",
+      "path": "raw.canonical.depth.abs_rel",
+      "direction": -1
+    },
+    "qe_dino": {
+      "metric": "evidence_query",
+      "path": "raw.canonical.overall_evidence.local_dino_similarity",
+      "direction": 1
+    },
+    "qe_lpips": {
+      "metric": "evidence_query",
+      "path": "raw.canonical.overall_evidence.lpips",
+      "direction": -1
+    },
+    "qe_psnr": {
+      "metric": "evidence_query",
+      "path": "raw.canonical.overall_evidence.psnr",
+      "direction": 1
+    },
+    "qe_ssim": {
+      "metric": "evidence_query",
+      "path": "raw.canonical.overall_evidence.ssim",
+      "direction": 1
+    },
+    "reproj_medium": {
+      "metric": "covisible_reprojection",
+      "path": "raw.medium.feature_reprojection_similarity.mean",
+      "direction": 1
+    },
+    "reproj_short": {
+      "metric": "covisible_reprojection",
+      "path": "raw.short.feature_reprojection_similarity.mean",
+      "direction": 1
+    },
+    "return_anchor_depth": {
+      "metric": "q0_return",
+      "path": "raw.canonical.anchor_depth.macro_abs_rel",
+      "direction": -1
+    },
+    "return_anchor_dino": {
+      "metric": "q0_return",
+      "path": "raw.canonical.anchor_macro.dino_similarity",
+      "direction": 1
+    },
+    "return_anchor_lpips": {
+      "metric": "q0_return",
+      "path": "raw.canonical.anchor_macro.lpips",
+      "direction": -1
+    },
+    "return_anchor_psnr": {
+      "metric": "q0_return",
+      "path": "raw.canonical.anchor_macro.psnr",
+      "direction": 1
+    },
+    "return_anchor_ssim": {
+      "metric": "q0_return",
+      "path": "raw.canonical.anchor_macro.ssim",
+      "direction": 1
+    },
+    "return_depth": {
+      "metric": "q0_return",
+      "path": "raw.canonical.depth.abs_rel",
+      "direction": -1
+    },
+    "return_dino": {
+      "metric": "q0_return",
+      "path": "raw.canonical.full_valid_image.dino_similarity",
+      "direction": 1
+    },
+    "return_lpips": {
+      "metric": "q0_return",
+      "path": "raw.canonical.full_valid_image.lpips",
+      "direction": -1
+    },
+    "return_psnr": {
+      "metric": "q0_return",
+      "path": "raw.canonical.full_valid_image.psnr",
+      "direction": 1
+    },
+    "return_ssim": {
+      "metric": "q0_return",
+      "path": "raw.canonical.full_valid_image.ssim",
+      "direction": 1
+    },
+    "revisit_different_dino": {
+      "metric": "completion_revisit",
+      "path": "raw.direct.different_pose.dino_global_similarity.mean",
+      "direction": 1
+    },
+    "revisit_geom_depth_abs_rel": {
+      "metric": "completion_revisit",
+      "path": "raw.canonical.depth_abs_rel.mean",
+      "direction": -1
+    },
+    "revisit_geom_dino_similarity": {
+      "metric": "completion_revisit",
+      "path": "raw.canonical.dino_similarity.mean",
+      "direction": 1
+    },
+    "revisit_geom_local_pointcloud_fscore": {
+      "metric": "completion_revisit",
+      "path": "raw.canonical.local_pointcloud_fscore.mean",
+      "direction": 1
+    },
+    "revisit_same_depth_abs_rel": {
+      "metric": "completion_revisit",
+      "path": "raw.direct.same_pose.depth_abs_rel.mean",
+      "direction": -1
+    },
+    "revisit_same_dino_patch_similarity": {
+      "metric": "completion_revisit",
+      "path": "raw.direct.same_pose.dino_patch_similarity.mean",
+      "direction": 1
+    },
+    "revisit_same_lpips": {
+      "metric": "completion_revisit",
+      "path": "raw.direct.same_pose.lpips.mean",
+      "direction": -1
+    },
+    "revisit_same_psnr": {
+      "metric": "completion_revisit",
+      "path": "raw.direct.same_pose.psnr.mean",
+      "direction": 1
+    },
+    "scale": {
+      "metric": "regional_scale_inconsistency",
+      "path": "raw.regional_scale_inconsistency.mean",
+      "direction": -1
+    }
+  },
+  "trees": {
+    "T3": {
+      "return": {
+        "appearance": {
+          "full": [
+            "return_psnr",
+            "return_ssim",
+            "return_lpips",
+            "return_dino"
+          ],
+          "anchors": [
+            "return_anchor_psnr",
+            "return_anchor_ssim",
+            "return_anchor_lpips",
+            "return_anchor_dino"
+          ]
+        },
+        "depth": [
+          "return_depth",
+          "return_anchor_depth"
+        ]
+      },
+      "qe": {
+        "appearance": {
+          "full": [
+            "qe_psnr",
+            "qe_ssim",
+            "qe_lpips",
+            "qe_dino"
+          ],
+          "anchors": [
+            "qe_anchor_psnr",
+            "qe_anchor_ssim",
+            "qe_anchor_lpips",
+            "qe_anchor_dino"
+          ]
+        },
+        "depth": [
+          "qe_depth",
+          "qe_anchor_depth"
+        ]
+      },
+      "identity": "identity_mean"
+    },
+    "T4": {
+      "same_pose": {
+        "rgb": [
+          "revisit_same_psnr",
+          "revisit_same_lpips"
+        ],
+        "semantic": "revisit_same_dino_patch_similarity",
+        "depth": "revisit_same_depth_abs_rel"
+      },
+      "different_pose": "revisit_different_dino",
+      "geometry": [
+        "revisit_geom_dino_similarity",
+        "revisit_geom_depth_abs_rel",
+        "revisit_geom_local_pointcloud_fscore"
+      ]
+    },
+    "T5": {
+      "depth": [
+        "depth_short",
+        "depth_medium"
+      ],
+      "feature": [
+        "reproj_short",
+        "reproj_medium"
+      ],
+      "scale": "scale",
+      "reconstruction": [
+        "gs_psnr",
+        "gs_ssim",
+        "gs_lpips"
+      ]
+    }
+  },
+  "overall_weights": {
+    "T1": 0.25,
+    "T2": 0.25,
+    "T3": 0.1,
+    "T4": 0.1,
+    "T5": 0.1,
+    "T6": 0.2
+  }
+}

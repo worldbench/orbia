@@ -1,0 +1,18 @@
+-r sam.txt
+OpenEXR>=3
+OpenImageIO==3.0.17.0
+open3d>=0.19
+accelerate
+qwen-vl-utils
+safetensors
+transformers @ git+https://github.com/huggingface/transformers.git
+xformers==0.0.34
+faiss-cpu
+pandas
+prettytable
+pypose
+decord
+imageio
+tqdm
+matplotlib
+tensorboard
