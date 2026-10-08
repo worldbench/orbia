@@ -2,8 +2,8 @@
 
 # Orbia: Do Generated Videos Form a Consistent 3D World?
 
-[![Paper](https://img.shields.io/badge/Paper-PDF-B31B1B)](https://dylanorange.github.io/projects/orbia/paper/orbia.pdf)
-[![Project Page](https://img.shields.io/badge/Project-Page-4285F4)](https://dylanorange.github.io/projects/orbia/)
+[![Paper](https://img.shields.io/badge/Paper-PDF-B31B1B)](https://orbia-bench.github.io/paper/orbia.pdf)
+[![Project Page](https://img.shields.io/badge/Project-Page-4285F4)](https://orbia-bench.github.io/)
 [![Dataset](https://img.shields.io/badge/Dataset-HuggingFace-FF9D00?logo=huggingface&logoColor=white)](https://huggingface.co/datasets/Orbia/Orbia)
 [![License](https://img.shields.io/badge/License-Apache--2.0-lightgrey)](LICENSE)
 
